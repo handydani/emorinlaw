@@ -1,27 +1,100 @@
 <style>
     /* add style later */
-
+    .lawoffice{
+        font-size: 1em
+    }
 </style>
 
 <head>
     <!--put the links to fonts here -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 
 <body>
-    <h1> Welcome to the Law Office of Elida M. Morin PA.</h1>
-
-	<div>
-		<h1>
-			Elida M. Morin
-		</h1>
-
-	</div>
 
 
-	<div>
-		<p>
-		</p>
-	</div>
+    <div data-role="page" id="pageone">
+      <div data-role="header" class = "lawoffice">
+        <h1> Welcome to the Law Office of Elida M. Morin PA.</h1>
+      </div>
 
+      <div data-role="main" class="ui-content">
+
+        <div class="ui-grid-a">
+
+          <div class="ui-block-a">
+              <h3> About </h3>
+              <span>
+                  My name is Elida M. Morin and I am a lawyer and a mediator.
+                  (insert bio here)
+              </span>
+
+              <h3> Certifications </h3>
+              <span>
+                  <h4>I can be your:</h4>
+                    <ul style="list-style-type:none">
+                    <li>Attorney at Law</li>
+                    <li> Florida Supreme Court Certified Family Mediator</li>
+                    </ul>
+                <h4>I graduated from:</h4>
+                    <ul style="list-style-type:none">
+                    <li>La Universidad de la Habana</li>
+                    <li>La Universidad Nacional Autonoma de Mexico</li>
+                    <li> St. Thomas University School of Law</li>
+                    </ul>
+              </span>
+          </div>
+
+          <div class="ui-block-b">
+              <h3> Location </h3>
+            <span>
+                <ul style="list-style-type:none">
+                <li>6780 Coral Way, 2nd Floor</li>
+                <li>Miami, Florida 33155</li>
+                </ul>
+                 <div id = "map" style = "width: 400px; height: 400px">
+                 </div>
+                 <script>
+                 function myMap()
+                 {
+                    var mapProp = {
+                        center: new google.maps.LatLng(25.747899, -80.305097),
+                        zoom: 5,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    }
+                    var map = new google.maps.Map(document.getElementById("map"), mapProp);
+                }
+                </script>
+
+                <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD_cI-6693vW7_rK4K1ffDo-jJWCoKibt0callback=myMap"> </script>
+            </span>
+             <h3> Contact </h3>
+             <span>
+                     <ul style="list-style-type:none">
+                     <li>emmorin@bellsouth.net</li>
+                     <li>Ph: 305-662-1220</li>
+                     <li>Fax: 305-662-1240</li>
+                     </ul>
+             </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+<!--
+    <div class="ui-block-a">
+        <h2>About </h2>
+        <span>First Column: This is some text. This is some text. This is some text. This is some text. This is some text.</span>
+     </div>
+
+     <div class="ui-block-b">
+         <h2>Location</h2>
+         <span>Second Column: This is some text. This is some text. This is some text. This is some text.</span>
+     </div>
+-->
 </body>
