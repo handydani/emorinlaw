@@ -1,14 +1,43 @@
 <style>
     /* add style later */
     .lawoffice{
-        font-size: 1em
+        font-size: 2em;
     }
     ul {
-    text-indent: -20px;
+        text-indent: -20px;
+        font-size: 20px;
+        font-family: "Raleway", sans-serif;
     }
     p{
         text-indent: 20px;
+        font-family: "Raleway", sans-serif;
+        font-size: 20px;
     }
+    h1{
+        color: #004080;
+        font-family: "Oswald", sans-serif;
+    }
+    h3{
+        color: #cc8800;
+        font-family: "Oswald", sans-serif;
+        font-size: 1.5em;
+    }
+
+
+    .coverphoto {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    body{
+        background-color: blue;
+    }
+    .pageone {
+        background-color: blue;
+    }
+
 </style>
 
 <head>
@@ -17,6 +46,8 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
 
@@ -24,8 +55,12 @@
 
 
     <div data-role="page" id="pageone">
-      <div data-role="header" class = "lawoffice">
-        <h1> Welcome to the Law Office of Elida M. Morin PA.</h1>
+
+        <div id = "coverphoto" >
+            <img src="gogh.png">
+        </div>
+      <div data-role="header" class = "lawoffice" id = "butt">
+        <h1>Law Office of Elida M. Morin PA.</h1>
       </div>
 
       <div data-role="main" class="ui-content">
@@ -36,7 +71,7 @@
               <h3> About </h3>
               <span>
                   <p>
-                  My name is Elida M. Morin and I am a lawyer and a mediator.
+                  My name is Elida M. Morin and I am a lawyer and a mediator. My specialty is in family law, although I also handle traffic disputes, blah, and other crap. I enjoy long walks on the beach and I love my daughter Daniela she's going to be famous she's so cool. Contact me for more information about rates and availabilities
                   (insert bio here)
                 </p>
               </span>
@@ -60,6 +95,14 @@
           </div>
 
           <div class="ui-block-b">
+              <h3> Contact </h3>
+              <span>
+                      <ul style="list-style-type:none">
+                      <li>emmorin@bellsouth.net</li>
+                      <li>Ph: 305-662-1220</li>
+                      <li>Fax: 305-662-1240</li>
+                      </ul>
+              </span>
               <h3> Location </h3>
             <span>
                 <ul style="list-style-type:none">
@@ -73,23 +116,22 @@
                  {
                     var mapProp = {
                         center: new google.maps.LatLng(25.747899, -80.305097),
-                        zoom: 5,
+                        zoom: 15,
                         mapTypeId: google.maps.MapTypeId.ROADMAP
                     }
                     var map = new google.maps.Map(document.getElementById("map"), mapProp);
+                    var marker = new google.maps.Marker({
+                         position: {lat: 25.747899, lng: -80.305097},
+                         map: map,
+                         title: 'Hello World!'
+                       });
                 }
                 </script>
 
-                <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD_cI-6693vW7_rK4K1ffDo-jJWCoKibt0callback=myMap"> </script>
+                <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD_cI-6693vW7_rK4K1ffDo-jJWCoKibt0&callback=myMap">
+                </script>
             </span>
-             <h3> Contact </h3>
-             <span>
-                     <ul style="list-style-type:none">
-                     <li>emmorin@bellsouth.net</li>
-                     <li>Ph: 305-662-1220</li>
-                     <li>Fax: 305-662-1240</li>
-                     </ul>
-             </span>
+
           </div>
 
         </div>
